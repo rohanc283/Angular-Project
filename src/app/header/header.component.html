@@ -1,0 +1,19 @@
+<header class="">
+  <div class="logobox ">
+    <img src="../../assets/Images/cinema-screen.png" alt="">
+    <h1>DEKH PICTURE</h1>
+  </div>
+  <nav>
+    <ul>
+      <li *ngIf="user == false"><a [routerLink]="['home']" [routerLinkActive]="'active'"><span id="home">Home</span>
+        </a></li>
+      <li *ngIf="user == false"><a [routerLink]="['addmovie']" [routerLinkActive]="'active'"><span>Add Movies</span></a>
+      </li>
+      <!-- <li><button (click)="reload()"><span>REload</span></button></li> -->
+    </ul>
+  </nav>
+  <div class="signbox" *ngIf="user == true">
+    <img src="../../assets/Images/rohan.jpeg">
+    <h4>ADMIN </h4>
+  </div>
+</header>

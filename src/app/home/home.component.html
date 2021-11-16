@@ -1,0 +1,28 @@
+<section class="movietype" id="movietype">
+  <div class="head">
+    <h2>Movies</h2>
+    <form class="d-flex">
+      <input class="form-control me-2" name="query" type="search" placeholder="Search" aria-label="Search"
+        [(ngModel)]="query">
+      <button class="btn btn-outline-success" type="submit">Search</button>
+    </form>
+  </div>
+  <div class="typebox">
+    <div *ngFor="let movie of movies | searchFilter: query" class="contentboxx">
+      <img src="{{movie.img}}" alt="">
+      <a href="" style="text-decoration: none;">
+        <h3>{{movie.title}}</h3>
+      </a>
+      <p>{{movie.description}}
+      </p>
+      <div class="don">
+        <button [routerLink]="['/edit', movie.id,movie.title]" type="button" style="margin: 10px;"
+          class="btn btn-primary">EDIT</button>
+        <button [routerLink]="['/delete', movie.id,movie.title ]" type="button" class="btn btn-danger">DELETE</button>
+      </div>
+
+    </div>
+  </div>
+
+
+</section>

@@ -1,0 +1,63 @@
+<div class="squarebox">
+</div>
+<section>
+  <div class="imgbox">
+    <img src="../../assets/Images/backgroundLogin.jpg" alt="">
+  </div>
+  <div class="effect-2">
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+  </div>
+  <div class="contentbox">
+    <div class="formbox" id="loginform">
+      <h2>Login</h2>
+      <form name="loginformm" #userform="ngForm" (ngSubmit)="login(userform.value,userform)">
+        <div class=" inputbox">
+          <span>Username</span>
+          <input type="text" [(ngModel)]="uname" name="name" required>
+          <span id="suname1"></span>
+        </div>
+        <div class="inputbox">
+          <span>Password</span>
+          <input type="password" [(ngModel)]="pass" name="pass" required>
+          <span id="spass1"></span>
+        </div>
+        <div class="inputbox">
+          <input type="submit" value="Sign In">
+        </div>
+        <div class="alert alert-danger" role="alert" *ngIf="isFormValid">
+          Please fill all fields.
+        </div>
+        <div class="alert alert-danger" role="alert" *ngIf="areCredentialsInvalid">
+          Invalid user or password.
+        </div>
+      </form>
+    </div>
+  </div>
+</section>
